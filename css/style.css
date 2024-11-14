@@ -164,6 +164,18 @@ iframe {
   margin: 0 auto;
 }
 
+.redes{
+  display: center;
+  align-items: center;
+  font-size: 25px;
+  
+}
+
+.redes img{
+    height: 20px;
+    margin-right: 10px;
+}
+
 footer{
   text-align: center;
   color: lightblue;
