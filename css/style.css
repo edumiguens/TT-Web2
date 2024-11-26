@@ -47,6 +47,21 @@ nav a:hover{
     color: lightcoral;
 }
 
+[class*="col-"] {
+  float: left;
+  padding: 0px;
+}
+
+.col-1 {width: 15%;}
+.col-2 {width: 80%;}
+.col-3 {width: 100%;}
+
+@media screen and (max-width: 600px) {
+  .col-1 {width: 0%;}
+  .col-2 {width: 100%;}
+  .col-3 {width: 100%;}
+}
+
 main {
   padding: 20px;
 }
@@ -97,32 +112,62 @@ p{
 }
 
 .slider-container {
-  overflow-x: auto;
-  scroll-snap-type: center;
   display: flex;
   width: 50%;
-  height: 40vh;
+  height: auto;
   margin: 0 auto;
 }
 
 .slider-container img {
-  flex: 0 0 100%;
   width: 100;
-  height: 360px;
+  height: auto;
   border-radius: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .slider-container {
+    display: flex;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 5%;
+    flex-direction: column;
+  }
+  
+  .slider-container img {
+    width: 100;
+    height: auto;
+    border-radius: 5%; 
+  }
 }
 
 .trayectoria-container {
   display: flex;
   width: 50%;
-  height: 40vh;
+  height: auto;
   margin: 0 auto;
+  border-radius: 5%;
 }
 
 .trayectoria-container img {
   width: 100;
-  height: 360px;
+  height: auto;
   border-radius: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .trayectoria-container {
+    display: flex;
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .trayectoria-container img {
+    width: 100;
+    height: auto;
+    border-radius: 5%;
+  }
 }
 
 .video{
@@ -130,6 +175,15 @@ p{
   justify-content: space-around;
   width: 640px;
   height: 360px;  
+}
+
+@media screen and (max-width: 600px) {
+  .video{
+    display: flex;
+    justify-content: space-around;
+    width: 440px;
+    height: 260px;  
+  }
 }
 
 .container {
@@ -188,7 +242,7 @@ footer{
   color: lightblue;
   font-size: 15px;
   padding: 15px;
-  height: 20px;
+  height: flex;
   background-color: #A950A1;
 }
 
